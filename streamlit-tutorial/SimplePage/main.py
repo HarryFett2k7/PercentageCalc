@@ -12,8 +12,8 @@ increase = st.toggle("Increase")
 decrease = st.toggle("Decrease")
 
 if increase:
-    start_entered = st.number_input("Enter start number: ", min_value = 0.000001)
-    final_entered = st.number_input("Enter final number: ", min_value = 0.000001)
+    start_entered = st.number_input("Enter start number: ", value = 0.01)
+    final_entered = st.number_input("Enter final number: ", value = 0.01)
     def calc(pStart, pFinal):
         return (pFinal - pStart) / pStart * 100
     output = calc(start_entered, final_entered)
@@ -21,8 +21,8 @@ if increase:
     
 
 if decrease:
-    start_entered1 = st.number_input("Enter start number: ", min_value = 0.000001)
-    final_entered1 = st.number_input("Enter final number: ", min_value = 0.000001)
+    start_entered1 = st.number_input("Enter start number: ", value = 0.01)
+    final_entered1 = st.number_input("Enter final number: ", value = 0.01)
     def calc(pStart, pFinal):
         return (pStart - pFinal) / pStart * 100
     output1 = calc(start_entered1, final_entered1)
